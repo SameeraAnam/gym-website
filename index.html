@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZQ FITNESS </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <a href="#home" class="logo">ZQ<span>FITNESS.</span></a>
+
+        <button class="menu-btn" id="menuBtn" aria-label="Toggle menu">☰</button>
+
+        <nav id="navbar">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#plans">Membership</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <a href="#plans" class="header-btn">JOIN NOW</a>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <p class="tagline">WELCOME TO ZQ FITNESS</p>
+            <h1>BUILD YOUR<br> <span>STRONGEST</span><br>SELF.</h1>
+            <p class="hero-text">
+                Train hard. Stay focused. Become stronger.
+                Your fitness journey starts here.
+            </p>
+            <a href="#plans" class="btn">EXPLORE PLANS →</a>
+        </div>
+    </section>
+
+    <section class="about section" id="about">
+        <div class="about-image"></div>
+
+        <div class="about-content">
+            <p class="tagline">ABOUT OUR GYM</p>
+            <h2>MORE THAN A GYM.<br><span>A LIFESTYLE.</span></h2>
+            <p>
+                Welcome to ZQ Fitness, where dedication meets
+                determination. Train with modern equipment,
+                follow expert guidance and work towards
+                your personal fitness goals.
+            </p>
+
+            <div class="stats">
+                <div><h3>20+</h3><p>Equipments</p></div>
+                <div><h3>10+</h3><p>Expert Trainers</p></div>
+                <div><h3>100%</h3><p>Dedication</p></div>
+            </div>
+        </div>
+    </section>
+
+    
+<section class="services section" id="services">
+    <p class="tagline center">WHAT WE OFFER</p>
+    <h2 class="section-title">OUR <span>PROGRAMS</span></h2>
+
+    <div class="service-grid">
+
+        <div class="service-card">
+            <img
+                src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=800&q=85"
+                alt="Weight Training"
+                loading="lazy"
+            >
+            <div class="service-info">
+                <h3>🏋️ Weight Training</h3>
+                <p>Build strength and improve fitness with structured resistance training.</p>
+            </div>
+        </div>
+
+        <div class="service-card">
+            <img
+                src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?auto=format&fit=crop&w=800&q=85"
+                alt="Cardio and fitness training"
+                loading="lazy"
+            >
+            <div class="service-info">
+                <h3>🏃 Cardio Training</h3>
+                <p>Improve stamina and cardiovascular health with guided cardio sessions.</p>
+            </div>
+        </div>
+
+        <div class="service-card">
+            <img
+                src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=800&q=85"
+                alt="Personal Training"
+                loading="lazy"
+            >
+            <div class="service-info">
+                <h3>💪 Personal Training</h3>
+                <p>Get individual guidance to work towards your fitness goals safely.</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+<section class="plans section" id="plans">
+        <p class="tagline center">CHOOSE YOUR MEMBERSHIP</p>
+        <h2 class="section-title">OUR <span>PLANS</span></h2>
+
+        <div class="plan-grid">
+            <div class="plan-card">
+                <h3>BASIC</h3>
+                <h2>₹999<span>/month</span></h2>
+                <p>Gym equipment access</p>
+                <p>General workout area</p>
+                <button class="plan-btn" data-plan="Basic">SELECT PLAN</button>
+            </div>
+
+            <div class="plan-card featured">
+                <div class="popular">POPULAR</div>
+                <h3>PRO</h3>
+                <h2>₹1,499<span>/month</span></h2>
+                <p>All Basic features</p>
+                <p>Fitness guidance</p>
+                <button class="plan-btn" data-plan="Pro">SELECT PLAN</button>
+            </div>
+
+            <div class="plan-card">
+                <h3>ELITE</h3>
+                <h2>₹2,499<span>/month</span></h2>
+                <p>All Pro features</p>
+                <p>Personal trainer sessions</p>
+                <p>Personalised fitness plan</p>
+                <button class="plan-btn" data-plan="Elite">SELECT PLAN</button>
+            </div>
+        </div>
+        <p class="disclaimer">* Membership fees and benefits may vary.
+    Please contact ZQ FITNESS for current pricing,
+    special offers, and terms & conditions.</p>
+    </section>
+
+    <section class="contact section" id="contact">
+        <p class="tagline center">LET'S GET STARTED</p>
+        <h2 class="section-title">JOIN THE <span>ZQ FITNESS</span></h2>
+        <p class="contact-intro">Have questions? Send us your details.</p>
+
+        <form id="contactForm">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <input type="tel" id="phone" placeholder="Your Phone Number" required>
+            <select id="goal" required>
+                <option value="">Choose Your Goal</option>
+                <option>General Fitness</option>
+                <option>Strength Training</option>
+                <option>Cardio Fitness</option>
+                <option>Personal Training</option>
+            </select>
+
+            <textarea id="message" placeholder="Your Message"></textarea>
+            <button type="submit" class="btn">SEND ENQUIRY →</button>
+        </form>
+
+        <p id="formMessage" role="status"></p>
+    </section>
+
+    <!-- Naya Footer Start -->
+    <footer class="main-footer">
+        <div class="footer-container">
+            
+            <!-- 1. Locate Us (Map) -->
+            <div class="footer-col">
+                <h3>Locate Us</h3>
+                <div class="map-container">
+                    <!-- Google Map Iframe (width 100% set kiya hai) -->
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3563.2177769838295!2d83.3694878748105!3d26.737425676752117!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3991450033345f2b%3A0x4383fce4076ad8d8!2sZQ%20FITNESS!5e0!3m2!1sen!2sin!4v1793450412249!5m2!1sen!2sin" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                </div>
+                <a href="https://maps.google.com" target="_blank" class="map-link">View on Google Maps</a>
+            </div>
+
+            <!-- 2. Contact Info -->
+            <div class="footer-col">
+                <h3>Contact</h3>
+                <p class="footer-desc">For membership and fitness inquiries:</p>
+                
+                <div class="contact-item">
+                    <span>📞</span> <a href="tel:+919876543210">+91 8115615640</a>
+                </div>
+                <div class="contact-item">
+                    <span>📞</span> <a href="tel:+919123456789">+91 7860084322</a>
+                </div>
+                <div class="contact-item">
+                    <span>✉️</span> <a href="mailto:zqfitness@gmail.com">zqfitness@gmail.com</a>
+                </div>
+                
+                <p class="footer-desc mt-15">ZQ FITNESS is a premium gym dedicated to building your strongest self.</p>
+            </div>
+
+            <!-- 3. Quick Links -->
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#plans">Membership</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Bottom Copyright -->
+        <div class="footer-bottom">
+            <p>© <span id="year"></span> ZQ FITNESS - All Rights Reserved</p>
+            <p>
+            BUILT WITH STRENGTH • POWERED BY PASSION
+        </p>
+        </div>
+    </footer>
+    <!-- Naya Footer End -->
+
+        <!-- Center Screen Popup -->
+    <div id="successPopup" class="popup-overlay">
+        <div class="popup-content">
+            <div class="popup-icon">✔</div>
+            <h3>Success!</h3>
+            <p id="popupMessage">Your enquiry has been sent successfully.</p>
+            <button class="popup-close-btn" onclick="closePopup()">AWESOME</button>
+        </div>
+    </div>
+
+    <!-- EmailJS Library -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <!-- Aapki Script -->
+    <script src="script.js"></script>
+</body>
+</html>

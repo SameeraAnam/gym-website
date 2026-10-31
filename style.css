@@ -1,0 +1,724 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 85px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #101010;
+    color: white;
+    line-height: 1.6;
+}
+
+:root {
+    --red: #ff3030;
+    --dark: #101010;
+    --gray: #1b1b1b;
+}
+
+header {
+    background: #111;
+    padding: 18px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid #292929;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: 900;
+    color: white;
+    text-decoration: none;
+}
+
+.logo span,
+h1 span,
+h2 span {
+    color: var(--red);
+}
+
+nav {
+    display: flex;
+    gap: 24px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: var(--red);
+}
+
+.header-btn,
+.btn {
+    display: inline-block;
+    background: var(--red);
+    color: white;
+    padding: 12px 22px;
+    text-decoration: none;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.header-btn:hover,
+.btn:hover,
+.plan-btn:hover {
+    background: #d91f1f;
+    transform: translateY(-2px);
+}
+
+.menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 27px;
+    cursor: pointer;
+}
+
+.hero {
+    min-height: 620px;
+    display: flex;
+    align-items: center;
+    padding: 80px 8%;
+    background:
+        linear-gradient(90deg, #080808 5%, rgba(0,0,0,.78) 50%, rgba(0,0,0,.25)),
+        url("https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1800&q=85")
+        center/cover no-repeat;
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.tagline {
+    color: var(--red);
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: clamp(45px, 7vw, 82px);
+    line-height: 1.08;
+    font-weight: 900;
+    margin-bottom: 22px;
+}
+
+.hero-text {
+    color: #ccc;
+    max-width: 440px;
+    margin-bottom: 30px;
+}
+
+.section {
+    padding: 85px 8%;
+}
+
+.about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 55px;
+}
+
+.about-image {
+    min-height: 380px;
+    background: url("gym.jpg")
+    center/cover no-repeat;
+    border-left: 5px solid var(--red);
+    border-radius: 10px;
+}
+
+.about h2,
+.section-title {
+    font-size: clamp(30px, 4vw, 44px);
+    line-height: 1.2;
+    margin-bottom: 25px;
+}
+
+.about-content > p:not(.tagline) {
+    color: #bbb;
+}
+
+.stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 28px;
+    margin-top: 30px;
+}
+
+.stats h3 {
+    color: var(--red);
+    font-size: 28px;
+}
+
+.stats p {
+    color: #aaa;
+    font-size: 13px;
+}
+
+.services {
+    background: #171717;
+}
+
+.center {
+    text-align: center;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.service-grid,
+.plan-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.service-card {
+    background: #222;
+    padding: 35px 25px;
+    border-bottom: 3px solid transparent;
+    transition: 0.3s;
+}
+
+.service-card:hover {
+    border-color: var(--red);
+    transform: translateY(-6px);
+}
+
+.service-icon {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.service-card h3 {
+    margin-bottom: 12px;
+}
+
+.service-card p {
+    color: #aaa;
+    font-size: 14px;
+}
+
+.plan-card {
+    position: relative;
+    background: #1d1d1d;
+    text-align: center;
+    padding: 38px 20px;
+    border: 1px solid #333;
+}
+
+.plan-card.featured {
+    border: 2px solid var(--red);
+}
+
+.plan-card h3 {
+    letter-spacing: 2px;
+}
+
+.plan-card h2 {
+    font-size: 32px;
+    margin: 18px 0;
+}
+
+.plan-card h2 span {
+    color: #aaa;
+    font-size: 13px;
+    font-weight: normal;
+}
+
+.plan-card p {
+    color: #bbb;
+    margin: 14px 0;
+}
+
+.popular {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: var(--red);
+    padding: 5px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.featured h3 {
+    margin-top: 15px;
+}
+
+.plan-btn {
+    margin-top: 22px;
+    padding: 12px 20px;
+    background: var(--red);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.disclaimer {
+    text-align: center;
+    margin-top: 25px;
+    font-size: 12px;
+    color: #888;
+}
+
+.contact {
+    background: #171717;
+    text-align: center;
+}
+
+.contact-intro {
+    color: #bbb;
+    margin: -25px 0 30px;
+}
+
+form {
+    max-width: 550px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 15px;
+    background: #252525;
+    color: white;
+    border: 1px solid #444;
+    font: inherit;
+    outline: none;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: var(--red);
+}
+
+textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+form .btn {
+    font-size: 15px;
+}
+
+#formMessage {
+    margin-top: 20px;
+    color: #ff7777;
+}
+
+/* =========================================
+   NAYA FOOTER DESIGN (Purane footer ko hata kar)
+   ========================================= */
+.main-footer {
+    background-color: #111;
+    padding-top: 60px;
+    border-top: 2px solid #292929;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: 1.2fr 1.5fr 0.8fr 0.5fr; 
+    gap: 80px;
+    max-width: 1400px; 
+    margin: 0 auto;
+    padding: 0 8% 40px 8%;
+}
+
+.footer-col h3 {
+    color: #fff;
+    font-size: 20px;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+/* Map */
+.map-container {
+    border: 2px solid #333;
+    margin-bottom: 15px;
+}
+.map-container iframe {
+    display: block;
+}
+.map-link {
+    color: var(--red);
+    font-size: 14px;
+    text-decoration: none;
+    font-weight: bold;
+}
+.map-link:hover {
+    text-decoration: underline;
+}
+
+/* Contact */
+.footer-desc {
+    color: #aaa;
+    font-size: 14px;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+.mt-15 {
+    margin-top: 15px;
+}
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+.contact-item span {
+    font-size: 16px;
+}
+.contact-item a {
+    color: #ddd;
+    text-decoration: none;
+    font-size: 15px;
+    transition: 0.3s;
+}
+.contact-item a:hover {
+    color: var(--red);
+}
+
+/* Quick Links */
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+.footer-links li {
+    margin-bottom: 12px;
+}
+.footer-links a {
+    color: #ddd;
+    text-decoration: none;
+    font-size: 15px;
+    transition: 0.3s;
+}
+.footer-links a:hover {
+    color: var(--red);
+    padding-left: 5px;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    text-align: center;
+    padding: 20px 15px;
+    background: #090909;
+    border-top: 1px solid #222;
+}
+.footer-bottom p {
+    color: #777;
+    font-size: 14px;
+    margin: 0;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+
+
+/* Responsive Footer */
+@media (max-width: 992px) {
+    .footer-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+}
+
+@media (max-width: 600px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .contact-item {
+        justify-content: center;
+    }
+    .footer-links a:hover {
+        padding-left: 0;
+    }
+}
+
+/* Purana Media Query */
+@media (max-width: 850px) {
+    header {
+        padding: 15px 5%;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    nav {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        padding: 20px;
+        background: #111;
+        flex-direction: column;
+        text-align: center;
+        gap: 18px;
+    }
+
+    nav.active {
+        display: flex;
+    }
+
+    .header-btn {
+        display: none;
+    }
+
+    .hero {
+        min-height: 540px;
+        padding: 60px 6%;
+        background-position: center;
+    }
+
+    .about {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .about-image {
+        min-height: 300px;
+    }
+
+    .service-grid,
+    .plan-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section {
+        padding: 65px 6%;
+    }
+}
+
+@media (max-width: 400px) {
+    .logo {
+        font-size: 21px;
+    }
+
+    .hero h1 {
+        font-size: 43px;
+    }
+
+    .stats {
+        gap: 18px;
+    }
+}
+
+/* =========================================
+   CENTER SCREEN MODAL POPUP
+   ========================================= */
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85); /* Dark blur background */
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.popup-overlay.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.popup-content {
+    background: #1b1b1b;
+    padding: 40px 30px;
+    border-radius: 10px;
+    text-align: center;
+    border-top: 4px solid var(--red);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+    transform: translateY(30px) scale(0.9);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    max-width: 400px;
+    width: 90%;
+}
+
+.popup-overlay.show .popup-content {
+    transform: translateY(0) scale(1);
+}
+
+.popup-icon {
+    background: var(--red);
+    color: white;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 35px;
+    margin: 0 auto 20px;
+    box-shadow: 0 0 20px rgba(255, 48, 48, 0.4);
+    animation: popIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+@keyframes popIn {
+    0% { transform: scale(0); }
+    80% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+.popup-content h3 {
+    color: #fff;
+    font-size: 26px;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.popup-content p {
+    color: #bbb;
+    font-size: 15px;
+    line-height: 1.5;
+    margin-bottom: 25px;
+}
+
+.popup-close-btn {
+    background: var(--red);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+    letter-spacing: 1px;
+}
+
+.popup-close-btn:hover {
+    background: #d91f1f;
+    transform: translateY(-2px);
+}
+
+/* ===== PROGRAM IMAGES ===== */
+
+.service-card {
+    padding: 0;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.service-card img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.service-card:hover img {
+    transform: scale(1.08);
+}
+
+.service-info {
+    padding: 25px;
+}
+
+/* ===== GYM GALLERY ===== */
+
+.gallery {
+    background: #101010;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.gallery-item {
+    position: relative;
+    height: 270px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.12);
+}
+
+.gallery-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 25px 15px;
+    background: linear-gradient(transparent, rgba(0,0,0,0.9));
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.gallery-item:hover .gallery-overlay {
+    color: #ff3030;
+}
+
+/* ===== MOBILE RESPONSIVE ===== */
+
+@media (max-width: 850px) {
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 550px) {
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-item {
+        height: 250px;
+    }
+
+    .service-card img {
+        height: 210px;
+    }
+}
